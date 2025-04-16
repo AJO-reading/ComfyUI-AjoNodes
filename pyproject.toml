@@ -1,0 +1,13 @@
+[project]
+name = "comfyui-ajonodes"
+description = ""
+version = "1.0.0"
+license = "MIT"
+dependencies = [""]
+
+[project.urls]
+Repository = "https://github.com/AJO-reading/ComfyUI-AjoNodes"
+[tool.comfy]
+PublisherId = "AJO-reading"
+DisplayName = "ComfyUI-AjoNodes"
+Icon = ""
