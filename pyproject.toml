@@ -7,6 +7,6 @@ license = {text = "MIT License"}
 [project.urls]
 Repository = "https://github.com/AJO-reading/ComfyUI-AjoNodes"
 [tool.comfy]
-PublisherId = "AJO-reading"
+PublisherId = "adamreading"
 DisplayName = "ComfyUI-AjoNodes"
 Icon = ""
