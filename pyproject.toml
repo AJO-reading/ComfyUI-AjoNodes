@@ -2,7 +2,7 @@
 name = "comfyui-ajonodes"
 description = ""
 version = "1.0.0"
-license = "MIT License"
+license = {text = "MIT License"}
 
 [project.urls]
 Repository = "https://github.com/AJO-reading/ComfyUI-AjoNodes"
