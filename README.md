@@ -60,5 +60,5 @@ This project is using the MIT License.
 
 - Thanks to the ComfyUI community for their ongoing work.
 - Proudly developed by the AJO-reading organization.
-- With assistance from @Verevolf, @mel (MTB) and @manu_le_surikhate_gamer
+- With assistance from @Verevolf, @melmass (MTB) and @manu_le_surikhate_gamer
 
