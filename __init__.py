@@ -3,6 +3,7 @@ import folder_paths
 import torch
 from comfy_extras.nodes_audio import SaveAudio as OriginalSaveAudio
 from comfy_execution.graph import ExecutionBlocker  # Nécessaire pour le blocage conditionnel
+from .vfi_utils import AJO_VfiSkipListCalculator
 
 
 class AJO_SaveAudio:
@@ -96,10 +97,14 @@ NODE_CLASS_MAPPINGS = {
     "AJO_AudioCollectAndConcat": AJO_AudioCollectAndConcat,
     # "AJO_PreviewAudio": AJO_PreviewAudio,  # Disabled
     # "AJO_SaveAudio": AJO_SaveAudio,        # Disabled
+    "AJO_VfiSkipListCalculator": AJO_VfiSkipListCalculator,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "AJO_AudioCollectAndConcat": "🔊 Audio Collect & Concat",
     # "AJO_PreviewAudio": "🔈 Preview Audio",  # Disabled
     # "AJO_SaveAudio": "💾 Save Audio"         # Disabled
+    "AJO_VfiSkipListCalculator": "VFI Frame Skip Calculator (AJO)",
 }
+
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
