@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-ajonodes"
-description = ""
+description = "A collection of custom nodes designed for ComfyUI from the AJO-reading organization. This repository currently includes the Audio Collect & Concat node, which collects multiple audio segments and concatenates them into a single audio stream."
 version = "1.0.0"
 license = {text = "MIT License"}
 
