@@ -1,6 +1,6 @@
 # ComfyUI-AjoNodes
 
-A collection of custom nodes designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) from the **AJO-reading** organization. This repository currently includes the **Audio Collect & Concat** node, which collects multiple audio segments and concatenates them into a single audio stream.
+A collection of custom nodes designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) from the **AJO-reading** organization. It ships with utilities for audio processing and video frame interpolation.
 
 ## Features
 
@@ -8,6 +8,9 @@ A collection of custom nodes designed for [ComfyUI](https://github.com/comfyanon
   - Collects multiple audio inputs.
   - Concatenates audio segments into one continuous output.
   - Checks for sample rate mismatches and raises an error if found.
+- **VFI Frame Skip Calculator**
+  - Generates a skip list for frame interpolation tools like RIFE.
+  - Outputs the required interpolation multiplier alongside the list.
 
 ## Folder Structure
 
@@ -15,6 +18,8 @@ A collection of custom nodes designed for [ComfyUI](https://github.com/comfyanon
 ComfyUI-AjoNodes/
 ├── __init__.py            # Main module defining the custom nodes.
 ├── README.md              # This file.
+├── vfi_utils.py           # VFI skip list calculator node.
+├── docs/                  # Optional documentation assets (images, etc.)
 └── web/
     └── ajo_widgets.js     # JavaScript extension for handling node widgets.
 ```
@@ -44,9 +49,32 @@ ComfyUI-AjoNodes/
 
 ## Usage
 
-Once installed, you can find the **Audio Collect & Concat** node in the "audio" category within ComfyUI. It is designed to be straightforward:
-- **Input:** Provide the audio input and an expected count of audio segments.
-- **Output:** Receives the concatenated audio and the count of collected segments.
+Once installed, you will see two categories of AJO nodes inside ComfyUI.
+
+### Audio Collect & Concat
+- **Location:** Appears under the `audio` category.
+- **Input:** Provide the audio tensor and the expected number of segments.
+- **Output:** The concatenated audio and a count of collected segments.
+
+### VFI Frame Skip Calculator
+- **Location:** Found under `AJO-Nodes/VFI`.
+- **Inputs:**
+  - `source_fps` – the frame rate of your input video.
+  - `target_fps` – the desired frame rate after interpolation.
+  - `total_input_frames` – number of frames in the original clip.
+- **Outputs:**
+  - `skip_list_string` – a comma-separated list of interpolation indices to skip.
+  - `rife_multiplier` – the base multiplier for your VFI node (typically `2`).
+
+### Adding Example Images
+Place screenshots or other assets inside the `docs/` directory. You can then
+embed them in this README using standard Markdown:
+
+```markdown
+![VFI Example](docs/vfi_example.png)
+```
+
+Commit the image file along with your changes so it appears on GitHub.
 
 ## Contributing
 
