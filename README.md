@@ -66,15 +66,8 @@ Once installed, you will see two categories of AJO nodes inside ComfyUI.
   - `skip_list_string` – a comma-separated list of interpolation indices to skip.
   - `rife_multiplier` – the base multiplier for your VFI node (typically `2`).
 
-### Adding Example Images
-Place screenshots or other assets inside the `docs/` directory. You can then
-embed them in this README using standard Markdown:
+![VFI Calculator Workflow](images/vfi_calculator_example.png)
 
-```markdown
-![VFI Example](docs/vfi_example.png)
-```
-
-Commit the image file along with your changes so it appears on GitHub.
 
 ## Contributing
 
